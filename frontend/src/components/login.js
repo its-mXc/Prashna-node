@@ -9,7 +9,6 @@ const Login = () => {
 	if(noticeOptions.view) {
 		return (
 			<>
-				<h1>View</h1>
 				<Notice heading={noticeOptions.heading} message={noticeOptions.message} variant={noticeOptions.variant}   />
 				<LoginForm setNoticeStateFunction={setNoticeOptions} />
 			</>
@@ -18,10 +17,7 @@ const Login = () => {
 	}
 	else {
 		return (
-			<>
-			<h1>Not View</h1>
-				<LoginForm setNoticeStateFunction={setNoticeOptions} />
-			</>
+			<LoginForm setNoticeStateFunction={setNoticeOptions} />
 		)
 	}
 }
